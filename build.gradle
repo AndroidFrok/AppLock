@@ -4,6 +4,7 @@ buildscript {
     apply from: 'maven.gradle'
     repositories {
         addCommonMaven(repositories)
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.4.2'
@@ -16,6 +17,7 @@ buildscript {
 allprojects {
     repositories {
         addCommonMaven(repositories)
+        google()
     }
 }
 
