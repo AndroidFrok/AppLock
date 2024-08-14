@@ -23,7 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    android.applicationVariants.all { variant ->
+    /*android.applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
@@ -32,7 +32,7 @@ android {
                 output.outputFile = new File(outputFile.parent, fileName)
             }
         }
-    }
+    }*/
     //忽略一些错误
     lintOptions {
         abortOnError true
@@ -40,9 +40,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support:design:25.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:25.0.0'
+    implementation 'com.android.support:design:25.0.0'
     //数据库
-    compile 'org.litepal.android:core:1.4.1'
+    implementation 'org.litepal.android:core:1.4.1'
 }
